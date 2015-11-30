@@ -9,7 +9,7 @@
     "suggestions": {
       "@id": "me:hasSuggestions"
     },
-    "emotionSets": {
+    "emotions": {
       "@id": "onyx:hasEmotionSet"
     },
     "sentiments": {

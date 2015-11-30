@@ -1,5 +1,5 @@
 {
-  "@context": "http://example.com/context.jsonld",
+  "@context": "http://mixedemotions-project.eu/ns/context.jsonld",
   "@id": "http://example.com#NIFExample",
   "analysis": [
   ],
@@ -10,8 +10,8 @@
         "nif:RFC5147String",
         "nif:Context"
       ],
-      "nif:beginIndex": "0",
-      "nif:endIndex": "40",
+      "nif:beginIndex": 0,
+      "nif:endIndex": 40,
       "nif:isString": "My favourite actress is Natalie Portman"
     }
   ]

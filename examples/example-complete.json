@@ -32,16 +32,16 @@
       "entities": [
         {
           "@id": "http://micro.blog/status1#char=5,13",
-          "nif:beginIndex": "5",
-          "nif:endIndex": "13",
+          "nif:beginIndex": 5,
+          "nif:endIndex": 13,
           "nif:anchorOf": "Microsoft",
           "me:references": "http://dbpedia.org/page/Microsoft",
           "prov:wasGeneratedBy": "me:NER1"
         },
         {
           "@id": "http://micro.blog/status1#char=25,37",
-          "nif:beginIndex": "25",
-          "nif:endIndex": "37",
+          "nif:beginIndex": 25,
+          "nif:endIndex": 37,
           "nif:anchorOf": "Windows Phone",
           "me:references": "http://dbpedia.org/page/Windows_Phone",
           "prov:wasGeneratedBy": "me:NER1"
@@ -52,11 +52,7 @@
           "@id": "http://micro.blog/status1#char=16,77",
           "nif:beginIndex": 16,
           "nif:endIndex": 77,
-          "nif:anchorOf": "put your Windows Phone on your newest #open technology program",
-          "entities": [
-            {
-              "@id": "http://micro.blog/status1#char=25,37"
-            }]
+          "nif:anchorOf": "put your Windows Phone on your newest #open technology program"
         }
       ],
       "sentiments": [
@@ -70,7 +66,7 @@
           "prov:wasGeneratedBy": "me:SAnalysis1"
         }
       ],
-      "emotionSets": [
+      "emotions": [
         {
           "@id": "http://micro.blog/status1#char=0,109",
           "nif:anchorOf": "Dear Microsoft, put your Windows Phone on your newest #open technology program. You'll be awesome. #opensource",

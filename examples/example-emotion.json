@@ -21,7 +21,7 @@
       ],
       "sentiments": [
       ],
-      "emotionSets": [
+      "emotions": [
         {
           "@id": "http://micro.blog/status1#char=0,109",
           "nif:anchorOf": "Dear Microsoft, put your Windows Phone on your newest #open technology program. You'll be awesome. #opensource",

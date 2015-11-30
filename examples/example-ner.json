@@ -18,16 +18,16 @@
       "entities": [
         {
           "@id": "http://micro.blog/status1#char=5,13",
-          "nif:beginIndex": "5",
-          "nif:endIndex": "13",
+          "nif:beginIndex": 5,
+          "nif:endIndex": 13,
           "nif:anchorOf": "Microsoft",
           "me:references": "http://dbpedia.org/page/Microsoft",
           "prov:wasGeneratedBy": "me:NER1"
         },
         {
           "@id": "http://micro.blog/status1#char=25,37",
-          "nif:beginIndex": "25",
-          "nif:endIndex": "37",
+          "nif:beginIndex": 25,
+          "nif:endIndex": 37,
           "nif:anchorOf": "Windows Phone",
           "me:references": "http://dbpedia.org/page/Windows_Phone",
           "prov:wasGeneratedBy": "me:NER1"
