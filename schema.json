@@ -1,0 +1,15 @@
+{
+  "id": "http://mixedemotions-project.eu/schema#",
+  "title": "MixedEmotions schema",
+  "type": "object",
+  "properties": {
+    "analysis": {
+      "description": "",
+      "type": "array"
+    },
+    "entries": {
+      "type": "array"
+    }
+  },
+  "required": ["analysis", "entries"]
+}
