@@ -1,6 +1,6 @@
 Examples
 ========
-All the examples in this page use the schema defined in the :ref:`schema definition <schema>`
+All the examples in this page use the schema defined in :ref:`schema`.
 
 Simple NIF annotation
 ---------------------
