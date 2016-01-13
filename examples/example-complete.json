@@ -14,7 +14,7 @@
     },
     {
       "@id": "me:EmotionAnalysis1",
-      "@type": "me:SuggestionAnalysis"
+      "@type": "me:EmotionAnalysis"
     },
     {
       "@id": "me:NER1",

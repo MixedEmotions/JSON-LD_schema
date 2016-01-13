@@ -4,7 +4,7 @@
   "analysis": [
     {
       "@id": "me:NER1",
-      "@type": "me:NER"
+      "@type": "me:NERAnalysis"
     }
   ],
   "entries": [
