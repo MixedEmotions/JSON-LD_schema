@@ -1,15 +1,137 @@
 {
-  "id": "http://mixedemotions-project.eu/schema#",
-  "title": "MixedEmotions schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Response",
+  "description": "A senpy response",
   "type": "object",
   "properties": {
+    "@context": {
+      "$ref": "#/definitions/Context"
+    },
+    "@id": {
+      "description": "ID of the analysis",
+      "type": "string"
+    },
     "analysis": {
-      "description": "",
-      "type": "array"
+      "type": ["array"],
+      "items": {
+        "$ref": "#/definitions/Analysis"
+      }
     },
     "entries": {
-      "type": "array"
+      "$ref": "#/definitions/Entry"
     }
+    
   },
-  "required": ["analysis", "entries"]
+  "required": ["@id", "analysis", "entries"],
+  "definitions": {
+    "Context": {
+      "description": "JSON-LD Context",
+      "type": ["array", "string", "object"]
+    },
+    "Analysis": {
+      "description": "Senpy analysis",
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string",
+          "description": "Type of the analysis. e.g. marl:SentimentAnalysis"
+        }
+      },
+      "required": ["@id", "@type"]
+    },
+    "Entry": {
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "enum": [["nif:RFC5147String", "nif:Context"]]
+        },
+        "nif:isString": {
+          "description": "String contained in this Context",
+          "type": "string"
+        },
+        "sentiments": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/Sentiment" }
+        },
+        "emotions": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/EmotionSet" }
+        },
+        "entities": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/Entity" }
+        },
+        "topics": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/Topic" }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/Suggestion" }
+        }
+      },
+      "required": ["@id", "@type", "nif:isString"]
+    },
+    "Sentiment": {
+      "properties": {
+        "@id": {"type": "string"},
+        "nif:beginIndex": {"type": "integer"},
+        "nif:endIndex": {"type": "integer"},
+        "nif:anchorOf": {
+          "description": "Piece of context that contains the Sentiment",
+          "type": "string"
+        },
+        "marl:hasPolarity": {
+          "enum": ["marl:Positive", "marl:Negative", "marl:Neutral"]
+        },
+        "marl:polarityValue": {
+          "type": "number"
+        },
+        "prov:wasGeneratedBy": {
+          "type": "string",
+          "description": "The ID of the analysis that generated this Sentiment. The full object should be included in the \"analysis\" property of the root object"
+        }
+      },
+      "required": ["id", "nif:anchorOf"]
+    },
+    "EmotionSet": {
+      "properties": {
+        "@id": {"type": "string"},
+        "nif:beginIndex": {"type": "int"},
+        "nif:endIndex": {"type": "int"},
+        "nif:anchorOf": {
+          "description": "Piece of context that contains the Sentiment",
+          "type": "string"
+        },
+        "marl:hasPolarity": {
+          "enum": ["marl:Positive", "marl:Negative", "marl:Neutral"]
+        },
+        "marl:polarityValue": {
+          "type": "number"
+        },
+        "prov:wasGeneratedBy": {
+          "type": "string",
+          "description": "The ID of the analysis that generated this Sentiment. The full object should be included in the \"analysis\" property of the root object"
+        }
+      },
+      "required": ["id", "nif:isString"]
+    },
+    "EmotionSet": {
+      "type": "object"
+    },
+    "Entity": {
+      "type": "object"
+    },
+    "Topic": {
+      "type": "object"
+    },
+    "Suggestion": {
+      "type": "object"
+    }
+  }
 }
